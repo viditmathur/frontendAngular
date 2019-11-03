@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/service/jobs.service';
 
 @Component({
   selector: 'app-viewpostedjobs',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewpostedjobsComponent implements OnInit {
 
-  constructor() { }
 
+  jobList;
+  applicantlist;
+  recruiterId;
+  constructor(private jobServices:JobsService) { }
+
+  showApplicantList(id){
+    this.jobServices.getApplicantList(id).subscribe(
+      data=>{
+        this.applicantlist=data;
+      }
+    );
+
+  }
   ngOnInit() {
+    this.jobServices.getJobList(this.recruiterId).subscribe(
+      data=>{
+        this.jobList=data
+    })
   }
 
 }

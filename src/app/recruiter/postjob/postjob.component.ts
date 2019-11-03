@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/service/jobs.service';
 
 @Component({
   selector: 'app-postjob',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostjobComponent implements OnInit {
 
-  constructor() { }
+  responseData
+  jobData;
+  recruiterId;
+  constructor(private jobServices:JobsService) { }
 
+  postJobDetails(){
+    this.jobServices.postJob(this.jobData).subscribe(
+      data=>{
+        this.responseData=data;
+      }
+    );
+
+  }
   ngOnInit() {
+    
   }
 
 }

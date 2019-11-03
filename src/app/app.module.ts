@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
+import { JobsService } from './service/jobs.service';
+import { UserService } from './service/user.service';
+import { AuthService } from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,11 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    UserService,
+    JobsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

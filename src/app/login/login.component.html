@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="switchbuttons">
+    <button (click)="switchToLogin()"> Login </button>
+    <button (click)="switchToSignup()"> Sign Up </button>
+
+</div>
+
+<div class="login" *ngIf="doLogin()">
+    <form class="loginform">
+        <input type="email" id="emailId" placeholder="Enter your Email Id">
+        <input type="password" id="password"  placeholder="Enter your Password">
+        <button type="submit" (click)="login()">Login</button>
+    </form>
+</div>
+
+<div class="signup" *ngIf="doSignup()">
+    <form class="signupform">
+        <input type="email" id="emailId" placeholder="Enter your Email Id">
+        <input type="password" id="password" placeholder="Enter your Password">
+        <input type="text" id="type"  placeholder="Enter your Role (Recruiter/JobSeeker)">
+        <button type="submit" (click)="signup()">Sign In</button>
+    </form>
+</div>

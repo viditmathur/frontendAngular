@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AlljobsComponent } from './alljobs/alljobs.component';
+import { MainComponent } from './main.component';
+import { MainRoutingModule } from './main.routing';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, AlljobsComponent],
+  declarations: [MainComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MainRoutingModule
   ]
 })
 export class MainModule { }

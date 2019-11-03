@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecruiterComponent } from './recruiter.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PostjobComponent } from './postjob/postjob.component';
-import { ViewpostedjobsComponent } from './viewpostedjobs/viewpostedjobs.component';
+import { RecruiterRoutingModule } from './recruiter.routing';
 
 
 
 @NgModule({
-  declarations: [RecruiterComponent, DashboardComponent, PostjobComponent, ViewpostedjobsComponent],
+  declarations: [RecruiterComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RecruiterRoutingModule
   ]
 })
 export class RecruiterModule { }

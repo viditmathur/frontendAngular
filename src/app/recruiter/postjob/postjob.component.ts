@@ -22,7 +22,7 @@ export class PostjobComponent implements OnInit {
 
   }
   ngOnInit() {
-    
+    this.recruiterId=sessionStorage.getItem("UserId");
   }
 
 }

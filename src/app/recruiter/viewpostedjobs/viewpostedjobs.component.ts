@@ -23,6 +23,7 @@ export class ViewpostedjobsComponent implements OnInit {
 
   }
   ngOnInit() {
+    this.recruiterId=sessionStorage.getItem('UserId')
     this.jobServices.getJobList(this.recruiterId).subscribe(
       data=>{
         this.jobList=data

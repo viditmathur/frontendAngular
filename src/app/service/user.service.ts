@@ -6,17 +6,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  public baseUrl="http://localhost:8080/";
+  public baseUrl="http://localhost:8080/api/";
   
   constructor(private http:HttpClient) { }
 
   getrecruiterdetails(id){
-    const url= this.baseUrl+"getRecruiter?recruiterId="+id;
+    const url= this.baseUrl+"recruiter/"+id;
     return this.http.get(url);
   }
 
   getUserDetails(id){
-    const url= this.baseUrl+"getUser?UserId="+id;
+    const url= this.baseUrl+"seeker/"+id;
     return this.http.get(url);
   }
 }

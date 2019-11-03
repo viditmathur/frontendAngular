@@ -5,27 +5,27 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class JobsService {
-  public baseUrl="http://localhost:8080/";
+  public baseUrl="http://localhost:8080/api/job/";
   
   constructor(private http:HttpClient) { }
 
   getApplicantList(id){
-    const url=this.baseUrl+"applicant?jobId="+id;
+    const url=this.baseUrl+"applicantList/"+id;
     return this.http.get(url);
   }
 
   getJobList(recruiterId){
-    const url=this.baseUrl+"job?recruiterId"+recruiterId;
+    const url=this.baseUrl+"jobList/"+recruiterId;
     return  this.http.get(url);
   }
  
   getAllAvailableJob(){
-    const url=this.baseUrl+"job";
+    const url=this.baseUrl;
     return  this.http.get(url); 
   }
 
   postJob(dataToSend){
-    const url=this.baseUrl+"job";
+    const url=this.baseUrl;
     return  this.http.post(url,dataToSend);
   }
 

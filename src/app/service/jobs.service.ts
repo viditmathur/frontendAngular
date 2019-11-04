@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class JobsService {
-  public baseUrl="http://localhost:8080/api/job/";
+  public baseUrl="https://recruitportal.herokuapp.com/api/job/";
   
   constructor(private http:HttpClient) { }
 

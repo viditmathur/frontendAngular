@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { JobsService } from './service/jobs.service';
 import { UserService } from './service/user.service';
 import { AuthService } from './service/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthService } from './service/auth.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     AuthService,

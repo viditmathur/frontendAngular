@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="menu" *ngIf="checkRole()">
         <ul>
-            <div class="menulist" *ngFor="let child in children; let id=index">
+            <div class="menulist" *ngFor="let child of children; let id=index">
                 <li>
                     <a href="{{child.path}}">{{child.message}}</a>
                 </li>
